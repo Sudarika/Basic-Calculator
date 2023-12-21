@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import com.example.basiccal.models.Calculator
 
 class MainActivity : AppCompatActivity() {
@@ -30,8 +31,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.btnMultiply -> ans = calculator.multiply()
                     R.id.btnDivide -> ans = calculator.divide()
                 }
-                println(ans)//this will print the output on the terminal
+               Toast.makeText(this,"Answer=$ans",Toast.LENGTH_LONG).show()
             }
         }
     }
-}
